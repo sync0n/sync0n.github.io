@@ -1,492 +1,196 @@
 <html>
-<header>
-  <div class="logo-container">
-    <h2 class="title">Responsive Flexbox Cards</h2>
-  </div>
-  <div class="nav-container">
-    <div class="link"><a href="">Link</a></div>
-    <div class="link"><a href="">Link</a></div>
-  </div>
-</header>
-<div class="container squeeze push--top">
-  <ul class="card-list">
-    <li class="card-list-item">
-      <div class="card">
-        <div class="card-image">
-          <img src="http://placehold.it/350x150" alt="placeholder" />
-        </div>
-        <div class="card-content">
-          <h3 class="card-heading">Header</h3>
-          <p>Here's some content</p>
-          <button class="btn btn-sm primary">button</button>
-        </div>
+
+
+<ul class="cards">
+  <li class="cards__item">
+    <div class="card">
+      <div class="card__image card__image--fence"></div>
+      <div class="card__content">
+        <div class="card__title">Flex</div>
+        <p class="card__text">This is the shorthand for flex-grow, flex-shrink and flex-basis combined. The second and third parameters (flex-shrink and flex-basis) are optional. Default is 0 1 auto. </p>
+        <button class="btn btn--block card__btn">Button</button>
       </div>
-    </li>
-    <li class="card-list-item">
-      <div class="card">
-        <div class="card-image">
-          <img src="http://placehold.it/350x150" alt="placeholder" />
-        </div>
-        <div class="card-content">
-          <h3 class="card-heading">Header</h3>
-          <p>Fusce sed purus ut elit hendrerit congue. Maecenas ornare consequat molestie.</p>
-          <button class="btn btn-sm primary">button</button>
-        </div>
+    </div>
+  </li>
+  <li class="cards__item">
+    <div class="card">
+      <div class="card__image card__image--river"></div>
+      <div class="card__content">
+        <div class="card__title">Flex Grow</div>
+        <p class="card__text">This defines the ability for a flex item to grow if necessary. It accepts a unitless value that serves as a proportion. It dictates what amount of the available space inside the flex container the item should take up.</p>
+        <button class="btn btn--block card__btn">Button</button>
       </div>
-    </li>
-    <li class="card-list-item">
-      <div class="card">
-        <div class="card-image">
-          <img src="http://placehold.it/350x150" alt="placeholder" />
-        </div>
-        <div class="card-content">
-          <h3 class="card-heading">Header</h3>
-          <p>Fusce sed purus ut elit hendrerit congue. Maecenas ornare consequat molestie.</p>
-          <button class="btn btn-sm primary">button</button>
-        </div>
+    </div>
+  </li>
+  <li class="cards__item">
+    <div class="card">
+      <div class="card__image card__image--record"></div>
+      <div class="card__content">
+        <div class="card__title">Flex Shrink</div>
+        <p class="card__text">This defines the ability for a flex item to shrink if necessary. Negative numbers are invalid.</p>
+        <button class="btn btn--block card__btn">Button</button>
       </div>
-    </li>
-    <li class="card-list-item">
-      <div class="card">
-        <div class="card-image">
-          <img src="http://placehold.it/350x150" alt="placeholder" />
-        </div>
-        <div class="card-content">
-          <h3 class="card-heading">Header</h3>
-          <p>Fusce sed purus ut elit hendrerit congue. Maecenas ornare consequat molestie.</p>
-          <button class="btn btn-sm primary">button</button>
-        </div>
+    </div>
+  </li>
+  <li class="cards__item">
+    <div class="card">
+      <div class="card__image card__image--flowers"></div>
+      <div class="card__content">
+        <div class="card__title">Flex Basis</div>
+        <p class="card__text">This defines the default size of an element before the remaining space is distributed. It can be a length (e.g. 20%, 5rem, etc.) or a keyword. The auto keyword means "look at my width or height property."</p>
+        <button class="btn btn--block card__btn">Button</button>
       </div>
-    </li>
-    <li class="card-list-item">
-      <div class="card">
-        <div class="card-image">
-          <img src="http://placehold.it/350x150" alt="placeholder" />
-        </div>
-        <div class="card-content">
-          <h3 class="card-heading">Header</h3>
-          <p>Fusce sed purus ut elit hendrerit congue. Maecenas ornare consequat molestie.</p>
-          <button class="btn btn-sm primary">button</button>
-        </div>
-      </div>
-    </li>
-    <li class="card-list-item">
-      <div class="card">
-        <div class="card-image">
-          <img src="http://placehold.it/350x150" alt="placeholder" />
-        </div>
-        <div class="card-content">
-          <h3 class="card-heading">Header</h3>
-          <p>Nullam tincidunt dignissim feugiat. Nullam eget enim sit amet eros tristique fringilla a ac metus.</p>
-          <p>And some more content.</p>
-          <button class="btn btn-sm primary">button</button>
-        </div>
-      </div>
-    </li>
-    <li class="card-list-item">
-      <div class="card">
-        <div class="card-image">
-          <img src="http://placehold.it/350x150" alt="placeholder" />
-        </div>
-        <div class="card-content">
-          <h3 class="card-heading">Header</h3>
-          <p>Nunc convallis velit vestibulum ex tristique tristique.</p>
-          <button class="btn btn-sm primary">button</button>
-        </div>
-      </div>
-    </li>
-  </ul>
-</div>
+    </div>
+  </li>
+</ul>
 </html>
 
 <style>
 
-/*------------------------------*\
-             ¡GENERAL
-\*------------------------------*/
-
-* {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
 }
-
 html {
-  height: 100%;
-  min-height: 100%;
+  background-color: #f0f0f0;
 }
-
 body {
-  background: #ecf0f1;
   color: #999999;
   font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-style: normal;
   font-weight: 400;
   letter-spacing: 0;
-  height: 100%;
+  padding: 1rem;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -moz-font-feature-settings: "liga" on;
 }
-
-
-
-/*------------------------------*\
-         ¡FLEXBOX MIXINS
-\*------------------------------*/
-
-@mixin flexbox {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -moz-flex;
-    display: -ms-flexbox;
-    display: flex;
+img {
+  height: auto;
+  max-width: 100%;
+  vertical-align: middle;
 }
-
-@mixin inline-flex {
-    display: -webkit-inline-box;
-    display: -webkit-inline-flex;
-    display: -moz-inline-flex;
-    display: -ms-inline-flexbox;
-    display: inline-flex;
+.btn {
+  background-color: white;
+  border: 1px solid #cccccc;
+  color: #696969;
+  padding: 0.5rem;
+  text-transform: lowercase;
 }
-
-@mixin flex-direction($value: row) {
-    @if $value == row-reverse {
-        -webkit-box-direction: reverse;
-        -webkit-box-orient: horizontal;
-    } @else if $value == column {
-        -webkit-box-direction: normal;
-        -webkit-box-orient: vertical;
-    } @else if $value == column-reverse {
-        -webkit-box-direction: reverse;
-        -webkit-box-orient: vertical;
-    } @else {
-        -webkit-box-direction: normal;
-        -webkit-box-orient: horizontal;
-    }
-    -webkit-flex-direction: $value;
-    -moz-flex-direction: $value;
-    -ms-flex-direction: $value;
-    flex-direction: $value;
-}
-
-@mixin flex-wrap($value: nowrap) {
-    // No Webkit Box fallback.
-    -webkit-flex-wrap: $value;
-    -moz-flex-wrap: $value;
-    @if $value == nowrap {
-        -ms-flex-wrap: none;
-    } @else {
-        -ms-flex-wrap: $value;
-    }
-    flex-wrap: $value;
-}
-
-@mixin flex-flow($values: (row nowrap)) {
-    // No Webkit Box fallback.
-    -webkit-flex-flow: $values;
-    -moz-flex-flow: $values;
-    -ms-flex-flow: $values;
-    flex-flow: $values;
-}
-
-@mixin order($int: 0) {
-    -webkit-box-ordinal-group: $int + 1;
-    -webkit-order: $int;
-    -moz-order: $int;
-    -ms-flex-order: $int;
-    order: $int;
-}
-
-@mixin flex-grow($int: 0) {
-    -webkit-box-flex: $int;
-    -webkit-flex-grow: $int;
-    -moz-flex-grow: $int;
-    -ms-flex-positive: $int;
-    flex-grow: $int;
-}
-
-@mixin flex-shrink($int: 1) {
-    -webkit-flex-shrink: $int;
-    -moz-flex-shrink: $int;
-    -ms-flex-negative: $int;
-    flex-shrink: $int;
-}
-
-@mixin flex-basis($value: auto) {
-    -webkit-flex-basis: $value;
-    -moz-flex-basis: $value;
-    -ms-flex-preferred-size: $value;
-    flex-basis: $value;
-}
-
-@mixin flex($fg: 1, $fs: null, $fb: null) {
-
-    // Set a variable to be used by box-flex properties
-    $fg-boxflex: $fg;
-
-    // Box-Flex only supports a flex-grow value so let's grab the
-    // first item in the list and just return that.
-    @if type-of($fg) == 'list' {
-        $fg-boxflex: nth($fg, 1);
-    }
-
-    -webkit-box-flex: $fg-boxflex;
-    -webkit-flex: $fg $fs $fb;
-    -moz-box-flex: $fg-boxflex;
-    -moz-flex: $fg $fs $fb;
-    -ms-flex: $fg $fs $fb;
-    flex: $fg $fs $fb;
-}
-
-@mixin justify-content($value: flex-start) {
-    @if $value == flex-start {
-        -webkit-box-pack: start;
-        -ms-flex-pack: start;
-    } @else if $value == flex-end {
-        -webkit-box-pack: end;
-        -ms-flex-pack: end;
-    } @else if $value == space-between {
-        -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-    } @else if $value == space-around {
-        -ms-flex-pack: distribute;
-    } @else {
-        -webkit-box-pack: $value;
-        -ms-flex-pack: $value;
-    }
-    -webkit-justify-content: $value;
-    -moz-justify-content: $value;
-    justify-content: $value;
-}
-
-@mixin align-items($value: stretch) {
-    @if $value == flex-start {
-        -webkit-box-align: start;
-        -ms-flex-align: start;
-    } @else if $value == flex-end {
-        -webkit-box-align: end;
-        -ms-flex-align: end;
-    } @else {
-        -webkit-box-align: $value;
-        -ms-flex-align: $value;
-    }
-    -webkit-align-items: $value;
-    -moz-align-items: $value;
-    align-items: $value;
-}
-
-@mixin align-self($value: auto) {
-    // No Webkit Box Fallback.
-    -webkit-align-self: $value;
-    -moz-align-self: $value;
-    @if $value == flex-start {
-        -ms-flex-item-align: start;
-    } @else if $value == flex-end {
-        -ms-flex-item-align: end;
-    } @else {
-        -ms-flex-item-align: $value;
-    }
-    align-self: $value;
-}
-
-@mixin align-content($value: stretch) {
-    // No Webkit Box Fallback.
-    -webkit-align-content: $value;
-    -moz-align-content: $value;
-    @if $value == flex-start {
-        -ms-flex-line-pack: start;
-    } @else if $value == flex-end {
-        -ms-flex-line-pack: end;
-    } @else {
-        -ms-flex-line-pack: $value;
-    }
-    align-content: $value;
-}
-
-
-
-/*------------------------------*\
-            ¡VARIABLES
-\*------------------------------*/
-$base-spacing-unit: 10px;
-$tablet-lg: 991px;
-$tablet: 767px;
-$phone-lg: 649px;
-$phone: 540px;
-$desktop: 1024px;
-$squeeze: 1024px;
-
-
-
-/*------------------------------*\
-              ¡CARDS
-\*------------------------------*/
-
-.container {
-  background: #ecf0f1;
-  margin: 0;
-  box-sizing: border-box;
-  margin: 0 auto;
+.btn--block {
+  display: block;
   width: 100%;
 }
-
-.card-list {
-  @include flexbox();
-  @include flex-wrap(wrap);
-  @include justify-content(flex-start);
-  max-width: 100%;
-}
-
-.card-list-item {
-  @include flexbox();
-  @include flex-grow(0);
-  padding: 0 0.5em;
+.cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   list-style: none;
-  transition: width .4s ease-in-out, flex .4s ease-in-out;
-  width: 25%;
-  @media screen and (max-width: $desktop) {
-    width: 33.33%;
-  }
-  @media screen and (max-width: $tablet) {
+  margin: 0;
+  padding: 0;
+}
+.cards__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 1rem;
+}
+@media (min-width: 40rem) {
+  .cards__item {
     width: 50%;
   }
-  @media screen and (max-width: $phone-lg) {
-    padding-left: 0;
-    width: 100%;
+}
+@media (min-width: 56rem) {
+  .cards__item {
+    width: 33.3333%;
   }
 }
-
 .card {
-  @include flexbox();
-  @include flex-direction(column);
-  background: #fff;
-  border-radius: 2px;
-  padding: 1em;
-  margin-bottom: 1em;
-  width: 100%;
-  img {
-    display: block;
-    height: auto;
-    margin: 0 auto;
-    max-width: 100%;
-    width: 100%;
-  }
-  &-content {
-    @include flexbox();
-    @include flex-direction(column);
-    @include flex(1 0 auto);
-    .card-heading {
-      color: #696969;
-      font-size: 1.25rem;
-      margin: 1em 0;
-      font-weight: 300;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-    }
-    p {
-      @include flex(1 0 auto);
-      font-size: 0.875rem;
-      line-height: 1.5;
-      margin: 0 0 1em;
-    }
-  }
+  background-color: white;
+  border-radius: 0.25rem;
+  box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  overflow: hidden;
 }
-
-
-
-/*------------------------------*\
-             ¡BUTTONS
-\*------------------------------*/
-
-.btn {
-  border: solid .125em;
-  color: #fff;
-  cursor: pointer;
-  font-weight: 600;
-  padding: .625em 1em;
-  text-transform: uppercase;
-  &.btn-lg {
-    font-size: 1.5rem;
-  }
-  &.btn-md {
-    font-size: 1.25rem;
-  }
-  &.btn-sm {
-    font-size: 1rem;
-  }
-  &.primary {
-    background: #34495e;
-    border-color: #34495e;
-    &.hollow {
-      background: transparent;
-      color: #34495e;
-    }
-  }
+.card:hover .card__image {
+  -webkit-filter: contrast(100%);
+          filter: contrast(100%);
 }
-
-
-
-/*------------------------------*\
-            ¡HELPERS
-\*------------------------------*/
-
-.squeeze {
+.card__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 1rem;
+}
+.card__image {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+  -webkit-filter: contrast(70%);
+          filter: contrast(70%);
+  overflow: hidden;
   position: relative;
-  margin: 0 auto;
-  padding: 0 20px;
-  max-width: $squeeze;
-  @media screen and (max-width: $phone-lg) {
-    padding: 0 10px;
+  -webkit-transition: -webkit-filter 0.5s cubic-bezier(0.43, 0.41, 0.22, 0.91);
+  transition: -webkit-filter 0.5s cubic-bezier(0.43, 0.41, 0.22, 0.91);
+  transition: filter 0.5s cubic-bezier(0.43, 0.41, 0.22, 0.91);
+  transition: filter 0.5s cubic-bezier(0.43, 0.41, 0.22, 0.91), -webkit-filter 0.5s cubic-bezier(0.43, 0.41, 0.22, 0.91);
+}
+.card__image::before {
+  content: "";
+  display: block;
+  padding-top: 56.25%;
+}
+@media (min-width: 40rem) {
+  .card__image::before {
+    padding-top: 66.6%;
   }
 }
-
-.push--top { margin-top: 20px }
-
-
-/*------------------------------*\
-              ¡HEADER
-\*------------------------------*/
-
-header {
-  @include flexbox();
-  @include align-items(stretch);
-  background: steelblue;
-  height: 50px;
+.card__image--flowers {
+  background-image: url(https://unsplash.it/800/600?image=82);
+}
+.card__image--river {
+  background-image: url(https://unsplash.it/800/600?image=11);
+}
+.card__image--record {
+  background-image: url(https://unsplash.it/800/600?image=39);
+}
+.card__image--fence {
+  background-image: url(https://unsplash.it/800/600?image=59);
+}
+.card__title {
+  color: #696969;
+  font-size: 1.25rem;
+  font-weight: 300;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+.card__text {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  margin-bottom: 1.25rem;
 }
 
-.logo-container {
-  @include flexbox();
-  @include flex-grow(1);
-  @include align-items(center);
-  padding: 0 0 0 10px;
-}
 
-.title {
-  color: #fff;
-  font-weight: 400;
-  @media screen and (max-width: $tablet) {
-    font-size: 22px;
-  }
-  @media screen and (max-width: $phone-lg) {
-    font-size: 16px;
-  }
-}
-
-.nav-container {
-  @include flexbox();
-  @include align-items(center);
-  @include flex-direction(row-reverse);
-  @include flex-grow(4);
-}
-
-.link {
-  margin: 0 25px;
-  a {
-    color: #fff;
-    text-decoration: none;
-  }
-}
 </style>
