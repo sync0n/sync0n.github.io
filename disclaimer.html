@@ -1,0 +1,153 @@
+
+<html>
+11
+
+<div class="container">
+  <div class="newsletter">
+    <div class="newsletter_body">
+      <div class="newsletter_text">
+        <h2>Important disclaimer before the course</h2>
+        <p>Please note that prior to taking the course you will be asked a series of questions aimed to determine your unique learning style.
+		
+		If you agree to take part in the questionnaire, please <a href="https://pjotrleshkin.github.io/myknvark/?fbclid=IwAR0ujwSqklDWUcgBLOemBduWfrVnpltbM2AvVY9ix24cZElG3gkaM4C9E9g">click here</a>.
+		
+      </div>
+    </div>
+    <div class="newsletter_footer">
+      <div class="footer_text">
+        <p>If you do not wish to take the test that determines your unique learning style, please choose from the list below the learning style that you think matches your personality:</span>
+        </p>
+		<li>1 </li>
+		<li>2 </li>
+		<li>3 </li>
+      </div>
+    </div>
+  </div>
+</div> </html>
+
+<style> $dribbble: #ea4c89;
+
+$roboto : "Roboto";
+$background : #cad7db;
+$dark_gray: #8b9091;
+$white: #fff;
+$white_footer: rgba(245,247,247,1);
+$white_icon: #e7eced;
+$black: #000;
+
+$green: #6bde8f;
+
+body{
+  background-color: $background;
+  font-family: $roboto;
+  padding: 50px;
+}
+.source{
+  background-color: $dribbble;
+  color: $white;
+  font-weight: 700;
+  text-decoration: none;
+  position: absolute;
+  padding: 10px;
+  top: 10px;
+  border-radius: 5px;
+  a{
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+}
+.container{
+  border:1px solid transparent;
+  background-color: #fff;
+  border-radius: 10px;
+  max-width: 50%;
+  margin: 0 auto;
+  box-shadow: 23px 25px 43px 0px rgba(74, 74, 74, 0.14); 
+}
+
+.newsletter{
+  .newsletter_body{
+    display: flex;
+    padding: 70px 64px;
+    @media(max-width: 970px){
+      flex-direction: column;
+      padding: 40px 20px;
+    }
+    .newsletter_icon{
+      flex: 1 1 40%;
+      margin-right: 30px;
+      display: flex;
+      @media(max-width: 970px){
+        margin-right: 0;
+      }
+      flex-direction: column-reverse;
+      img{
+        max-width: 100%;
+        margin: 0 auto;
+        @media(max-width: 700px){
+          max-width: 50%;
+        }
+      }
+      img:hover{
+        opacity: .8;
+      }
+    }
+    .newsletter_text{
+      flex: 1 1 60%;
+      text-align: center;
+      color: $dark_gray;
+      h2{ 
+        font-size: 1.4rem;
+        text-transform: uppercase;
+        font-weight: 900;
+        letter-spacing: 1.2px;
+      }
+      p{
+        font-size: 0.8rem;
+        font-weight: 300;
+        line-height: 1.5;
+        margin-bottom: 30px;
+      }
+      a{
+        color: $green;
+        font-weight: 700;
+        font-size: .7rem;
+        text-decoration: none;
+      }
+      a:hover{
+        border-bottom : 1px solid $green;
+      }
+    }
+  }
+  .newsletter_footer{
+    display:flex;
+    .footer_text{
+      flex: 1 1 90%;
+      background-color: $white_footer;
+      color: $black;
+      font-size: .8rem;
+      padding: 20px 40px;
+      @media(max-width: 970px){
+        padding: 10px 20px;
+      }
+      p{
+        font-weight: 300;
+        opacity: .6;
+        span{
+          font-weight: 500;
+        }
+      }
+    }
+    .footer_img{
+      flex: 1 1 10%;
+      background-color: $white_icon;
+      padding: 20px 30px;
+      display: flex;
+      align-items: center;
+      opacity: 0.3;
+    }
+  }
+}
+</style>
