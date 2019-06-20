@@ -1,7 +1,19 @@
 
 <html>
+<header>
+  <h1>Modal Popup</h1>
+</header>
+<a href="#" class="modalButton" data-popup="popupOne">Model Popup</a>
 
-
+<section class="modal modalWindow" id="popupOne">  
+	<section class="modalWrapper">
+		<h2>Modal Popup </h2>
+		<p></p>
+		
+	</section>
+	<a class="closeBtn">CLOSE X</a>
+</section>
+<section class="modal overlay"></div>
 <div class="container">
   <div class="newsletter">
     <div class="newsletter_body">
@@ -58,6 +70,8 @@ body{
     letter-spacing: 2px;
   }
 }
+
+
 .container{
   border:1px solid transparent;
   background-color: #fff;
@@ -150,4 +164,63 @@ body{
     }
   }
 }
+
+
 </style>
+
+
+<script>
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+
+</script>
+

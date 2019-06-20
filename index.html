@@ -48,15 +48,40 @@
 		<ul style="list-style-type:none;">
         <li>Learn at your own pace</li>
 		<li>Get access to materials that are structured based on your uniqie learning style</li>
-		<li>Get the certificate & badge</li>
+		<li>Get the certificate</li><li>Earn a badge</li>
         </ul>
 		
 		</p>
 		
-		</div>
-        <button class="btn btn--block card__btn"><a href="disclaimer.html">Learn more</a></button>
-      </div>
+<div class="background">
+  <a href="#open-modal" class="button">Learn more</a>
+  <div id="open-modal" class="modal__background">	
+    <div class="modal__content">
+      <a href="#close" title="Close" class="close">
+		<img src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-close-128.png">
+      </a>
+       <h2>Confirmation</h2>
+        <p>Please note that prior to taking the course you will be asked a series of questions aimed to determine your unique learning style.
+		</p>
+		<p>
+		If you agree to take part in the questionnaire, please <a href="https://pjotrleshkin.github.io/myknvark/?fbclid=IwAR0ujwSqklDWUcgBLOemBduWfrVnpltbM2AvVY9ix24cZElG3gkaM4C9E9g">click here</a>.
+		</p>
+		<p>
+		If you do not wish to take the test that determines your unique learning style, please choose from the list below the learning style that you think matches your personality:
+		</p>
+		<ul>
+		<li>1 </li>
+		<li>2 </li>
+		<li>3 </li>
+		</ul>
+		
     </div>
+  </div>
+</div> 
+
+    </div>
+	
+	
   </li>
   <li class="cards__item">
     <div class="card">
@@ -401,7 +426,95 @@ border-left:   1px dotted  #09f;
   display:none;
 }
 
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700');
+.modal__background {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  -webkit-transition: 0.35s;
+  transition: 0.35s;
+  background: rgba(0, 0, 0, 0.8);
+  opacity: 0;
+  pointer-events: none;
+  z-index: 2;
+}
+.modal__background:target {
+  opacity: 1;
+  pointer-events: auto;
+}
 
+
+
+.button {
+  background-color: #87CEFA;
+  border: 1px solid #cccccc;
+  color: #696969;
+  padding: 0.3rem;
+  text-transform: lowercase;
+    display: block;
+  width: 85%;
+    margin-left: 14%;
+	  margin-bottom: -20px;
+	  height: 5%;
+  text-align: center;
+  
+}
+.button:hover {
+  background: #223f5d;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+  color: #fff;
+}
+
+.modal__content {
+  background: #fff;
+  padding: 1rem;
+  position: relative;
+  z-index: 4;
+}
+@media screen and (max-width: 699px) {
+  .modal__content {
+    margin: 2rem;
+  }
+}
+@media screen and (min-width: 700px) {
+  .modal__content {
+    margin: 4rem auto;
+    max-width: 400px;
+    min-height: 300px;
+  }
+}
+.modal__content svg,
+.modal__content path {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  height: 25px;
+  width: 25px;
+  -webkit-transition: all 0.15s ease-out 0s;
+  transition: all 0.15s ease-out 0s;
+  fill: #bfbfbf;
+}
+.modal__content svg:hover,
+.modal__content path:hover {
+  fill: #0c0c0c;
+}
+
+h2 {
+  color: #223f5d;
+ font-family: 'Roboto', sans-serif;
+  font-size: 40px;
+  margin: 0rem 0 1rem;
+  text-align: center;
+}
+.close img {
+    float: right;
+    width: 20px;
+}
+.success {
+  width: 100%;
+}
 </style>
 
 
@@ -432,3 +545,5 @@ function lightbox_close() {
 }
 
 </script>
+
+
