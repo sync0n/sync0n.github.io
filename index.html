@@ -8,18 +8,17 @@
     </video>
 </div>
 
+
 <div id="fade" onClick="lightbox_close();"></div>
 
 <div id="href">
   <a href="#" onclick="lightbox_open();"><font color="Black">Welcome video</a>
 </div>
 
-
-
-
 <ul class="cards">
   <li class="cards__item">
     <div class="card">
+	
       <div class="card__image card__image--fence"></div>
       <div class="card__content">
         <div class="card__title">Simply share it!</div>
@@ -170,7 +169,6 @@
 </html>
 
 <style>
-
 *,
 *::before,
 *::after {
@@ -196,15 +194,12 @@ img {
   max-width: 100%;
   vertical-align: middle;
 }
-
 .list {
   margin-left: -40px;
     font-size: 0.875rem;
   line-height: 1.5;
   margin-bottom: 1.25rem;
 }
-
-
 .btn {
   background-color: #87CEFA;
   border: 1px solid #cccccc;
@@ -275,10 +270,10 @@ img {
       -ms-flex-direction: column;
           flex-direction: column;
   padding: 1rem;
-
 border-right:  1px dotted #f0F;
 border-bottom: 1px dotted #f00;
 border-left:   1px dotted  #09f;
+max-width: 480px;
 }
 .card__image {
   background-position: center center;
@@ -310,19 +305,16 @@ border-left:   1px dotted  #09f;
   border-style: dotted;
   border-width: 1px;
 }
-
 .card__image--faq {
   background-image: url(https://i.ibb.co/g91wXbs/kisspng-cloud-computing-computer-icons-question-informatio-5ae0926dea9d92-083900101524666989961.png);
   border-style: dotted;
   border-width: 1px;
 }
-
 .card__image--data {
   background-image: url(https://i.ibb.co/R4WZYZz/kissclipart-data-analytics-icon-png-clipart-analytics-computer-1e7f303b35fbb236.png);
   border-style: dotted;
   border-width: 1px;
 }
-
 .card__image--river {
   background-image: url(https://i.ibb.co/KVwV8Td/oc-icon.png);
   border-style: dotted;
@@ -354,7 +346,6 @@ border-left:   1px dotted  #09f;
   line-height: 1.5;
   margin-bottom: 1.25rem;
 }
-
 #fade {
   display: none;
   position: fixed;
@@ -368,7 +359,6 @@ border-left:   1px dotted  #09f;
   opacity: .80;
   filter: alpha(opacity=80);
 }
-
 #light {
   display: none;
   position: absolute;
@@ -383,22 +373,21 @@ border-left:   1px dotted  #09f;
   z-index: 1002;
   overflow: visible;
 }
-
 #href {
-  margin-left: 34.5%;
+  margin-left: 35.5%;
   margin-top: 10px;
   border: 2px solid #FFF;
   font-size: 20px;
   background-color: #66CDAA;
   color: white;
-  padding: 13px 8.5%;
+  padding: 14px 8.5%;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-     width : auto;
-  
-}
+	 max-width: 400px;
 
+
+}
 #boxclose {
   float: right;
   cursor: pointer;
@@ -417,15 +406,12 @@ border-left:   1px dotted  #09f;
   z-index: 1002;
   opacity: 0.9;
 }
-
 .boxclose:before {
   content: "×";
 }
-
 #fade:hover ~ #boxclose {
   display:none;
 }
-
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700');
 .modal__background {
   position: fixed;
@@ -444,9 +430,6 @@ border-left:   1px dotted  #09f;
   opacity: 1;
   pointer-events: auto;
 }
-
-
-
 .button {
   background-color: #87CEFA;
   border: 1px solid #cccccc;
@@ -466,7 +449,6 @@ border-left:   1px dotted  #09f;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
   color: #fff;
 }
-
 .modal__content {
   background: #fff;
   padding: 1rem;
@@ -500,7 +482,6 @@ border-left:   1px dotted  #09f;
 .modal__content path:hover {
   fill: #0c0c0c;
 }
-
 h2 {
   color: #223f5d;
  font-family: 'Roboto', sans-serif;
@@ -519,7 +500,6 @@ h2 {
 
 
 <script>
-
 window.document.onkeydown = function(e) {
   if (!e) {
     e = event;
@@ -528,7 +508,6 @@ window.document.onkeydown = function(e) {
     lightbox_close();
   }
 }
-
 function lightbox_open() {
   var lightBoxVideo = document.getElementById("VisaChipCardVideo");
   window.scrollTo(0, 0);
@@ -536,14 +515,10 @@ function lightbox_open() {
   document.getElementById('fade').style.display = 'block';
   lightBoxVideo.play();
 }
-
 function lightbox_close() {
   var lightBoxVideo = document.getElementById("VisaChipCardVideo");
   document.getElementById('light').style.display = 'none';
   document.getElementById('fade').style.display = 'none';
   lightBoxVideo.pause();
 }
-
 </script>
-
-
