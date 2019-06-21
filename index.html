@@ -1,5 +1,5 @@
 <html>
-
+<!--
 <div id="light">
   <a class="boxclose" id="boxclose" onclick="lightbox_close();"></a>
   <video id="VisaChipCardVideo" width="600" controls>
@@ -11,9 +11,9 @@
 
 <div id="fade" onClick="lightbox_close();"></div>
 
-<div id="href">
+<!--<div id="href">
   <a href="#" onclick="lightbox_open();"><font color="Black">Welcome video</a>
-</div>
+</div>-->
 
 <ul class="cards">
   <li class="cards__item">
@@ -86,7 +86,7 @@
     <div class="card">
       <div class="card__image card__image--record"></div>
       <div class="card__content">
-        <div class="card__title">Self help</div>
+        <div class="card__title">Self Help</div>
         <p class="card__text">If you prefer a systematic approach to problem solving you can check here to:
 		
 							<div class="list">
@@ -105,7 +105,7 @@
     <div class="card">
       <div class="card__image card__image--flowers"></div>
       <div class="card__content">
-        <div class="card__title">Your digital identity</div>
+        <div class="card__title">Digital Identity</div>
         <p class="card__text">Make your digital footrpint reflect how you want to be seen and learn how to:
 		
 							<div class="list">
@@ -147,7 +147,7 @@
     <div class="card">
       <div class="card__image card__image--data"></div>
       <div class="card__content">
-        <div class="card__title">Data center</div>
+        <div class="card__title">Data Center</div>
         <p class="card__text">Learn more about myKN via data and find insights that will help you to navigate your team to successful platform usage: 
 		<div class="list">
 				<ul style="list-style-type:none;">
@@ -199,6 +199,8 @@ img {
     font-size: 0.875rem;
   line-height: 1.5;
   margin-bottom: 1.25rem;
+    font-weight: 400;
+
 }
 .btn {
   background-color: #87CEFA;
@@ -274,6 +276,7 @@ border-right:  1px dotted #f0F;
 border-bottom: 1px dotted #f00;
 border-left:   1px dotted  #09f;
 max-width: 480px;
+  background-image: linear-gradient(to right, rgba(255,0,0,0), rgba(228, 241, 254, 1));
 }
 .card__image {
   background-position: center center;
@@ -331,12 +334,14 @@ max-width: 480px;
   border-width: 1px;
 }
 .card__title {
-  color: #696969;
+  color: black;
   font-size: 1.25rem;
-  font-weight: 300;
   letter-spacing: 2px;
   text-transform: uppercase;
   text-align: center;
+   padding-left: 10px;
+     font-weight: 500;
+
 }
 .card__text {
   -webkit-box-flex: 1;
@@ -345,6 +350,7 @@ max-width: 480px;
   font-size: 0.875rem;
   line-height: 1.5;
   margin-bottom: 1.25rem;
+  background-image: linear-gradient(to right, rgba(255,0,0,0), rgba(228, 241, 254, 1));
 }
 #fade {
   display: none;
@@ -496,6 +502,21 @@ h2 {
 .success {
   width: 100%;
 }
+
+.module-border-wrap {
+  max-width: 250px;
+  padding: 1rem;
+  position: relative;
+  background: linear-gradient(to right, red, purple);
+  padding: 3px;
+}
+
+.module {
+  background: #222;
+  color: white;
+  padding: 2rem;
+}
+
 </style>
 
 
