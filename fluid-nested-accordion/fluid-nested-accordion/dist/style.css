@@ -1,0 +1,53 @@
+* {
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+  font-size: 1em;
+  font-family: Calibri, Arial, sans-serif;
+}
+
+.container {
+  margin: 0 auto;
+  width: 80%;
+}
+
+.nested-accordion {
+  margin-top: 0.5em;
+  cursor: pointer;
+}
+.nested-accordion h3 {
+  padding: 0 0.5em;
+}
+.nested-accordion .comment {
+  line-height: 1.5;
+  padding: 0.5em;
+}
+.nested-accordion h3 {
+  color: #47a3da;
+}
+.nested-accordion h3:before {
+  content: "+";
+  padding-right: 0.25em;
+  color: #becbd2;
+  font-size: 1.5em;
+  font-weight: 500;
+  font-family: "Lucida Console", Monaco, monospace;
+  position: relative;
+  right: 0;
+}
+.nested-accordion h3.selected {
+  background: #47a3da;
+  color: #fff;
+}
+.nested-accordion h3.selected:before {
+  content: "-";
+}
+.nested-accordion .comment {
+  color: #768e9d;
+  border: 0.063em solid #47a3da;
+  border-top: none;
+}
+.nested-accordion a {
+  text-decoration: none;
+  color: #47a3da;
+}
