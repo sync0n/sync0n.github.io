@@ -1,0 +1,119 @@
+<!doctype html>
+
+
+
+<title>Example</title>
+<style>
+  * {
+    box-sizing: border-box; 
+  }
+  body {
+    display: flex;
+    min-height: 50vh;
+width: 1000px;
+    flex-direction: row;
+    margin: 0;
+	    overflow:hidden;
+		onload="window.frames.scrollTo(300,3020);
+
+  }
+  .col-1 {
+    background: #D7E8D4;
+    flex: 1;
+  }
+  .col-2 {
+    display: flex;
+    flex-direction: column;
+    flex: 5;
+  }
+  .content {
+    display: flex;
+    flex-direction: row;
+  }
+  .content > article {
+    flex: 4;
+    min-height: 60vh;
+  }
+  header, footer {
+    background: white;
+    height: 12vh;
+  }
+  header, footer, article, nav {
+    padding: 1em;
+  }
+  iFrame {
+  margin-left: -225px;
+  margin-top: -130px;
+  
+  
+      width:840px;
+    height:317px;
+    overflow:scroll;     /* if you don't want a scrollbar, set to hidden */
+    overflow-x:hidden;   /* hides horizontal scrollbar on newer browsers */
+
+    /* resize and min-height are optional, allows user to resize viewable area */
+    -webkit-resize:vertical; 
+    -moz-resize:vertical;
+    resize:vertical;
+    min-height:317px;
+  }
+  p {
+  width: 200px;
+    font-stretch: expanded;
+  }
+  
+  iframe#embed
+{
+    width:1000px;       /* set this to approximate width of entire page you're embedding */
+    height:2000px;      /* determines where the bottom of the page cuts off */
+    margin-left:-183px; /* clipping left side of page */
+    margin-top:-244px;  /* clipping top of page */
+    overflow:hidden;
+
+    /* resize seems to inherit in at least Firefox */
+    -webkit-resize:none;
+    -moz-resize:none;
+    resize:none;
+}
+  
+</style>
+<body>
+  <nav class="col-1">
+  
+      <h2>Instructions</h2>
+	
+    <p><p><u>How to create a forum?</u></p>
+	
+<p><strong>Step 1:</strong> 
+Decide whether you want to create a public or a community forum.</p>
+
+<p><strong>Step 2:</strong> 
+Once you are on the forum app, click &ldquo;Start a Forum&rdquo;</p>
+
+<p><strong>Step 3:</strong> 
+Choose a title, and add a description if needed.</p>
+
+<p><strong>Step 4:</strong> 
+There will now be an option to start a topic. You can create as many topics as you want.</p>
+
+<p><strong>Step 5:</strong> 
+Pick you tags. We recommend a minimum of 2, but the more the merrier - as this would increase the ease of finding relevant information for your colleagues and give your forum more exposure.</p>
+
+<p><strong>Step 6:</strong> 
+Use the editor section to create your forum topic. The &ldquo;HTML source&rdquo; tab will provide additional functions. Some ideas available <a href="https://connections.mykn.community/wikis/home?lang=en-us#!/wiki/Wde1655caa817_4950_b38d_0337f30682fb/page/HTML%20Code%20Overview%20(snippets)">here</a>.</p>
+<p><strong>Step 7:</strong> Click &ldquo;Save&rdquo; and your topic is created.</p>
+<p>&nbsp;</p></p>
+  
+  </nav>
+  <div class="col-2">
+  	<header>Header</header>
+    <main class="content">
+    <article><div class="column middle">
+    <iframe id="embed" width="1400" height="710" fraimeborder="0" sandbox="allow-same-origin allow-scripts allow-popups allow-forms" src="https://www.wikipedia.org/" style="-webkit-transform:scale(0.7);-moz-transform-scale(0.7); "></iframe>
+    </</article></div>
+
+
+    </main>
+  	<footer>Footer</footer>
+  </div>
+</body>
