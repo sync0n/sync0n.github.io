@@ -14,17 +14,18 @@ width: 1000px;
     flex-direction: row;
     margin: 0;
 	    overflow:hidden;
-		onload="window.frames.scrollTo(300,3020);
+		  background-image: linear-gradient(to right, #4e54c8		 , white); /* Standard syntax (must be last) */
 
   }
   .col-1 {
-    background: #D7E8D4;
+    background: #4e54c8	;
     flex: 1;
   }
   .col-2 {
     display: flex;
     flex-direction: column;
     flex: 5;
+	background: #transparent;
   }
   .content {
     display: flex;
@@ -35,8 +36,8 @@ width: 1000px;
     min-height: 60vh;
   }
   header, footer {
-    background: white;
-    height: 12vh;
+    	background: #1E90FF;
+    height: 1vh;
   }
   header, footer, article, nav {
     padding: 1em;
@@ -44,45 +45,170 @@ width: 1000px;
   iFrame {
   margin-left: -225px;
   margin-top: -130px;
-  
-  
-      width:840px;
-    height:317px;
-    overflow:scroll;     /* if you don't want a scrollbar, set to hidden */
-    overflow-x:hidden;   /* hides horizontal scrollbar on newer browsers */
-
-    /* resize and min-height are optional, allows user to resize viewable area */
-    -webkit-resize:vertical; 
-    -moz-resize:vertical;
-    resize:vertical;
-    min-height:317px;
   }
   p {
-  width: 200px;
+  width: 250px;
     font-stretch: expanded;
   }
   
-  iframe#embed
-{
-    width:1000px;       /* set this to approximate width of entire page you're embedding */
-    height:2000px;      /* determines where the bottom of the page cuts off */
-    margin-left:-183px; /* clipping left side of page */
-    margin-top:-244px;  /* clipping top of page */
-    overflow:hidden;
+  .context {
+    width: 100%;
+    position: absolute;
+    top:50vh;
+    
+  }
 
-    /* resize seems to inherit in at least Firefox */
-    -webkit-resize:none;
-    -moz-resize:none;
-    resize:none;
+.area{
+    background: #4e54c8;  
+    background: -webkit-linear-gradient(to left, #8f94fb, #4e54c8);  
+    width: 100%;
+    height:100vh;
+    
+   
 }
+
+.circles{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.circles li{
+    position: absolute;
+    display: block;
+    list-style: none;
+    width: 20px;
+    height: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    animation: animate 25s linear infinite;
+    bottom: -150px;
+    
+}
+
+.circles li:nth-child(1){
+    left: 25%;
+    width: 80px;
+    height: 80px;
+    animation-delay: 0s;
+}
+
+
+.circles li:nth-child(2){
+    left: 10%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 2s;
+    animation-duration: 12s;
+}
+
+.circles li:nth-child(3){
+    left: 70%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 4s;
+}
+
+.circles li:nth-child(4){
+    left: 40%;
+    width: 60px;
+    height: 60px;
+    animation-delay: 0s;
+    animation-duration: 18s;
+}
+
+.circles li:nth-child(5){
+    left: 65%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 0s;
+}
+
+.circles li:nth-child(6){
+    left: 75%;
+    width: 110px;
+    height: 110px;
+    animation-delay: 3s;
+}
+
+.circles li:nth-child(7){
+    left: 35%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 7s;
+}
+
+.circles li:nth-child(8){
+    left: 50%;
+    width: 25px;
+    height: 25px;
+    animation-delay: 15s;
+    animation-duration: 45s;
+}
+
+.circles li:nth-child(9){
+    left: 20%;
+    width: 15px;
+    height: 15px;
+    animation-delay: 2s;
+    animation-duration: 35s;
+}
+
+.circles li:nth-child(10){
+    left: 85%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 0s;
+    animation-duration: 11s;
+}
+
+
+
+@keyframes animate {
+
+    0%{
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+        border-radius: 0;
+    }
+
+    100%{
+        transform: translateY(-1000px) rotate(720deg);
+        opacity: 0;
+        border-radius: 50%;
+    }
+
+}
+
+@import url('https://fonts.googleapis.com/css?family=Exo:400,700');
   
 </style>
 <body>
+
+
+
+<div class="area" >
+            <ul class="circles">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+            </ul>
+    </div >
+
   <nav class="col-1">
-  
+  <div style="height:520px;width:300px;overflow:auto;background-color:white;color:black;scrollbar-base-color:gold;font-family:sans-serif;padding:10px;">
       <h2>Instructions</h2>
-	
-    <p><p><u>How to create a forum?</u></p>
+	<p>You probably heard that forum are great for discussions. Let’s start with the basic forum functions</p>
+    <p><u>How to create a forum?</u></p>
 	
 <p><strong>Step 1:</strong> 
 Decide whether you want to create a public or a community forum.</p>
@@ -103,17 +229,20 @@ Pick you tags. We recommend a minimum of 2, but the more the merrier - as this w
 Use the editor section to create your forum topic. The &ldquo;HTML source&rdquo; tab will provide additional functions. Some ideas available <a href="https://connections.mykn.community/wikis/home?lang=en-us#!/wiki/Wde1655caa817_4950_b38d_0337f30682fb/page/HTML%20Code%20Overview%20(snippets)">here</a>.</p>
 <p><strong>Step 7:</strong> Click &ldquo;Save&rdquo; and your topic is created.</p>
 <p>&nbsp;</p></p>
-  
+  </div>
   </nav>
   <div class="col-2">
-  	<header>Header</header>
     <main class="content">
     <article><div class="column middle">
-    <iframe id="embed" width="1400" height="710" fraimeborder="0" sandbox="allow-same-origin allow-scripts allow-popups allow-forms" src="https://www.wikipedia.org/" style="-webkit-transform:scale(0.7);-moz-transform-scale(0.7); "></iframe>
+
+<div style="border: none; overflow: hidden; margin: 2px auto; max-width: 960px; margin-left: 10px">
+<iframe sandbox="allow-same-origin allow-scripts allow-popups allow-forms" src="https://connections.mykn.community/forums/html/public?lang=en_us"scrolling="no" style="border: 0px none; margin-left: -290px; height: 670px; margin-top: -125px; width: 1300px; -webkit-transform:scale(0.9);-moz-transform-scale(0.9);" ></iframe>
     </</article></div>
 
 
     </main>
-  	<footer>Footer</footer>
+
   </div>
 </body>
+
+
