@@ -1,141 +1,111 @@
-<html> 
-
-<header>
-     <h1>Responsive Layout using Flexbox</h1>
-</header>
-
-<div id="main">
-    <nav>nav</nav>
-    <aside>aside</aside>
-    
-    <article>
-      <div class="resp-container">
-    <iframe class="resp-iframe" src="https://www.wikipedia.org" gesture="media"  allow="encrypted-media" allowfullscreen sandbox="allow-same-origin allow-scripts allow-popups allow-forms"style="border: 0px none; -webkit-transform:scale(0.9);-moz-transform-scale(0.9); scrolling="no"></iframe>
-</div>
-    </article>
-
-</div>
-<footer>
-Footer
-</footer>
+<!doctype html>
 
 
 
-</html>
-
+<title>Example</title>
 <style>
+  * {
+    box-sizing: border-box; 
+  }
+  body {
+    display: flex;
+    min-height: 50vh;
+width: 1000px;
+    flex-direction: row;
+    margin: 0;
+	    overflow:hidden;
+		  background-image: linear-gradient(to right, #E6E6FA		 , white); /* Standard syntax (must be last) */
 
-* {
-    box-sizing: border-box;
-}
-body {
-    margin: 1em;
-    font: 1.2em/1.3em 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', 'Roboto-Light', 'Roboto Light', 'Roboto', 'Segoe UI Web Light', 'Segoe UI Light', 'Segoe UI Web Regular', 'Segoe UI', Helvetica, Arial, sans-serif;
-  color: #fff;
-}
-h1 {
-    font-weight: normal;
-    text-align: center;
-}
-p {
-    margin: 0 0 1em 0;
-}
-
-#main {
-   margin: 0;
-   padding: 0;
-   display: -webkit-flex;
-   display: flex;
-   -webkit-flex-flow: row;
-   flex-flow: row;
-}
-
-header,
-footer,
-#main > article,
-#main > nav,
-#main > aside {
-   margin: 4px;
-   padding: 1em;
-}
- 
-#main > article {
-   background: #996;
-   -webkit-flex: 4 1 0;
-           flex: 4 1 0;
-   -webkit-order: 2;
-           order: 2;
-}
-
-#main > nav,
-#main > aside {
-   background: #663;
-   -webkit-flex: 1 6 0;
-           flex: 1 6 0;
-}
-#main > nav {
-   -webkit-order: 1;
-           order: 1;
-}
+  }
+  .col-1 {
+    background: #E6E6FA	;
+    flex: 1;
+  }
+  .col-2 {
+    display: flex;
+    flex-direction: column;
+    flex: 5;
+	background: #transparent;
+  }
+  .content {
+    display: flex;
+    flex-direction: row;
+  }
+  .content > article {
+    flex: 4;
+    min-height: 60vh;
+  }
+  header, footer {
+    	background: #1E90FF;
+    height: 1vh;
+  }
+  header, footer, article, nav {
+    padding: 1em;
+  }
+  iframe {
+  margin-left: -225px;
+  margin-top: -130px;
+  }
+  p {
+  width: 250px;
+    font-stretch: expanded;
+  }
   
-#main > aside {
-   -webkit-order: 3;
-           order: 3;
-}
- 
-header, footer {
-   display: block;
-   min-height: 80px;
-}
-
-header {
-   background: #633;
-}
-
-footer {
-  background: #c66;
-}
- 
-/* Too narrow to support three columns */
-  @media all and (max-width: 640px) {
-  
-   #main, #page {
-    -webkit-flex-flow: column;
-            flex-flow: column;
-}
-
-   #main > article, #main > nav, #main > aside {
-    /* Return them to document order */
-    -webkit-order: 0;
-            order: 0;
-   }
-  
-   #main > nav, #main > aside, header, footer {
-    min-height: 50px;
-  
-   }
-    
-    
-    <style> 
-
-.resp-container {
-    position: relative;
-    overflow: hidden;
-    padding-top: 56.25%;
-}
-
-
-.resp-iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
+  .context {
     width: 100%;
-    height: 100%;
-    border: 0;
-
-}
+    position: absolute;
+    top:50vh;
     
-}
+  }
 
-
+  
 </style>
+<body>
+
+
+
+
+  <nav class="col-1">
+  
+  
+  <div style="height:520px;width:300px;overflow:auto;margin: 19% auto;background-color:white;color:black;scrollbar-base-color:gold;font-family:sans-serif;padding:10px;">
+      <h2>Instructions</h2>
+	<p>You probably heard that forum are great for discussions. Let’s start with the basic forum functions</p>
+    <p><u>How to create a forum?</u></p>
+	
+<p><strong>Step 1:</strong> 
+Decide whether you want to create a public or a community forum.</p>
+
+<p><strong>Step 2:</strong> 
+Once you are on the forum app, click &ldquo;Start a Forum&rdquo;</p>
+
+<p><strong>Step 3:</strong> 
+Choose a title, and add a description if needed.</p>
+
+<p><strong>Step 4:</strong> 
+There will now be an option to start a topic. You can create as many topics as you want.</p>
+
+<p><strong>Step 5:</strong> 
+Pick you tags. We recommend a minimum of 2, but the more the merrier - as this would increase the ease of finding relevant information for your colleagues and give your forum more exposure.</p>
+
+<p><strong>Step 6:</strong> 
+Use the editor section to create your forum topic. The &ldquo;HTML source&rdquo; tab will provide additional functions. Some ideas available <a href="https://connections.mykn.community/wikis/home?lang=en-us#!/wiki/Wde1655caa817_4950_b38d_0337f30682fb/page/HTML%20Code%20Overview%20(snippets)">here</a>.</p>
+<p><strong>Step 7:</strong> Click &ldquo;Save&rdquo; and your topic is created.</p>
+
+  </div></div>
+  </nav>
+  <div class="col-2">
+    <main class="content">
+    <article><div class="column middle">
+
+<div style="border: none; overflow: hidden; margin: 6% auto; max-width: 960px; margin-left: 10px">
+<iframe sandbox="allow-same-origin allow-scripts allow-popups allow-forms" src="https://connections.mykn.community/forums/html/public?lang=en_us"scrolling="no" style="border: 0px none; margin-left: -290px;  height: 670px; margin-top: -125px; width: 1300px; -webkit-transform:scale(0.9);-moz-transform-scale(0.9);" ></iframe>
+    </</article></div></div>
+
+
+    </main>
+
+  </div>
+</body>
+
+
